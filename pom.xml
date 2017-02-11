@@ -8,5 +8,28 @@
     <artifactId>chapter3</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <packaging>war</packaging>
 
+    <!--Smart Framework-->
+    <dependencies>
+        <dependency>
+            <groupId>org.smart4j</groupId>
+            <artifactId>smart-framework</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--tomcat-->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <path>/${project.artifactId}</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
